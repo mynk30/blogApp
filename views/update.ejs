@@ -1,0 +1,38 @@
+<%- include('./partials/header.ejs') %>
+
+
+    <div class="container col-6 px-5 py-4">
+        <form action="/finalUpdate" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" name="author" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Your Name" value="<%= object.author_update %>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Title</label>
+                <input type="text" name="title" class="form-control" id="exampleFormControlInput2"
+                    placeholder="Your Blog Title" value="<%= object.title_update %>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea3" class="form-label">The Blog</label>
+                <textarea class="form-control" name="blog" id="exampleFormControlTextarea3"
+                    rows="3"><%= object.content_update %></textarea>
+            </div>
+            <input type="hidden" name="index" value="<%= object.tail %>">
+
+            <button class="btn btn-primary" type="submit">
+                Update
+            </button>
+        </form>
+        
+        <form action="/delete" method="post" class="mt-2">
+            <input type="hidden" name="index" value="<%= object.tail %>">
+            <button class="btn btn-danger" type="submit">
+                DELETE
+            </button>
+        </form>
+        
+    </div>
+
+
+    <%- include('./partials/footer.ejs') %>

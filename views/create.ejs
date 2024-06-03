@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %>
+
+
+    <div class="container col-6 px-5 py-4">
+        <form action="/submit" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" name="author" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Title</label>
+                <input type="text" name="title" class="form-control" id="exampleFormControlInput2" placeholder="Your Blog Title">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea3" class="form-label">The Blog</label>
+                <textarea class="form-control" name="blog" id="exampleFormControlTextarea3" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary col-12" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+
+
+    <%- include('./partials/footer.ejs') %>
